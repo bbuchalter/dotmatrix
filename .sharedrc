@@ -36,9 +36,9 @@ twiki () {
   rake db:migrate && rake db:migrate:redo && rake db:test:prepare
 }
 
-alias sc='rails console'
-alias ss='rails server'
-alias sdbc='rails dbconsole -p'
+alias sc='bundle exec rails console'
+alias ss='bundle exec rails server'
+alias sdbc='bundle exec rails dbconsole -p'
 
 alias ll='ls -l'
 
@@ -138,3 +138,4 @@ source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 alias gg='git grep'
 alias tj='cd ~/workspace/tommyjohn'
+alias be='bundle exec'
