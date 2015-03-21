@@ -134,8 +134,15 @@ if [[ -s "$HOME/.rvm/bin" ]] ; then export PATH="$PATH:$HOME/.rvm/bin" ; fi
 
 
 
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
+OSX_CHRUBY_PATH=/usr/local/opt/chruby/share/chruby
+if [[ -s "$OSX_CHRUBY_PATH/chruby.sh" ]] ; then source "$OSX_CHRUBY_PATH/chruby.sh" ; fi
+if [[ -s "$OSX_CHRUBY_PATH/auto.sh" ]] ; then source "$OSX_CHRUBY_PATH/auto.sh" ; fi
+
+UBUNTU_CHRUBY_PATH=/usr/local/share/chruby
+if [[ -s "$UBUNTU_CHRUBY_PATH/chruby.sh" ]] ; then source "$UBUNTU_CHRUBY_PATH/chruby.sh" ; fi
+if [[ -s "$UBUNTU_CHRUBY_PATH/auto.sh" ]] ; then source "$UBUNTU_CHRUBY_PATH/auto.sh" ; fi
+
+
 alias gg='git grep'
 alias tj='cd ~/workspace/tommyjohn'
 alias be='bundle exec'
