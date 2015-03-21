@@ -131,3 +131,10 @@ fi
 
 # RVM exectuble path for scripting, when available
 if [[ -s "$HOME/.rvm/bin" ]] ; then export PATH="$PATH:$HOME/.rvm/bin" ; fi
+
+
+
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+alias gg='git grep'
+alias tj='cd ~/workspace/tommyjohn'
