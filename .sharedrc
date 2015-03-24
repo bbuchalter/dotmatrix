@@ -146,3 +146,4 @@ if [[ -s "$UBUNTU_CHRUBY_PATH/auto.sh" ]] ; then source "$UBUNTU_CHRUBY_PATH/aut
 alias gg='git grep'
 alias tj='cd ~/workspace/tommyjohn'
 alias be='bundle exec'
+alias gpus='git push --set-upstream origin $(git symbolic-ref --short HEAD 2>/dev/null)'
