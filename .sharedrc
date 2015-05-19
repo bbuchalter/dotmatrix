@@ -38,6 +38,7 @@ twiki () {
 
 alias sc='bundle exec rails console'
 alias ss='bundle exec rails server'
+alias sm='bundle exec rake db:migrate db:test:prepare'
 alias sdbc='bundle exec rails dbconsole -p'
 
 alias ll='ls -l'
