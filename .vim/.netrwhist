@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/brian/Dropbox/system/aws'
+let g:netrw_dirhist_2='/home/brian/workspace/tommyjohn/.git'
+let g:netrw_dirhist_3='/home/brian/workspace/dotmatrix'
+let g:netrw_dirhist_4='/home/brian/workspace'
+let g:netrw_dirhist_5='/home/brian'
+let g:netrw_dirhist_6='/home/brian/workspace/dotmatrix'
