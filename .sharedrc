@@ -43,6 +43,8 @@ alias sdbc='bundle exec rails dbconsole -p'
 
 alias ll='ls -l'
 
+alias fz="find . -type f | fzy"
+
 # git_prompt_info accepts 0 or 1 arguments (i.e., format string)
 # returns text to add to bash PS1 prompt (includes branch name)
 git_prompt_info () {
