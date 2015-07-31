@@ -36,10 +36,12 @@ twiki () {
   rake db:migrate && rake db:migrate:redo && rake db:test:prepare
 }
 
-alias sc='bundle exec rails console'
-alias ss='bundle exec rails server'
-alias sm='bundle exec rake db:migrate db:test:prepare'
-alias sdbc='bundle exec rails dbconsole -p'
+alias sc='bundle exec bin/rails console'
+alias ss='bundle exec bin/rails server'
+alias sm='bundle exec bin/rake db:migrate db:test:prepare'
+alias sr='bundle exec bin/rspec'
+alias sdbc='bundle exec bin/rails dbconsole -p'
+alias gprq='git pull-request'
 
 alias ll='ls -l'
 
