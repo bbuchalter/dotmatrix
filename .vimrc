@@ -22,6 +22,8 @@ set hidden
 set guifont=Monaco:h16
 set guioptions-=T guioptions-=e guioptions-=L guioptions-=r
 set shell=bash
+set number
+set colorcolumn=80
 
 augroup vimrc
   autocmd!
