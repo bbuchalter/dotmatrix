@@ -126,3 +126,5 @@ cdpath=(~ ~/src $DEV_DIR $SOURCE_DIR)
 
 # remove duplicates in $PATH
 typeset -aU path
+
+alias vf="vim \$(ag . --nocolor -l -g '' | fzy)"
