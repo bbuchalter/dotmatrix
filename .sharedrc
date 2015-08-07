@@ -155,3 +155,6 @@ alias gpus='git push --set-upstream origin $(git symbolic-ref --short HEAD 2>/de
 alias suspend='dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Suspend'
 alias tjpath='cd ~/workspace/tommyjohn'
 alias dotpath='cd ~/workspace/dotmatrix'
+
+# https://gist.github.com/dergachev/4627207
+function gifmov() { ffmpeg -i $1 -s 600x400 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > $1.gif ;}
