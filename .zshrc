@@ -34,7 +34,7 @@ zstyle ':completion:*' cache-path ~/.zshcache
 autoload colors; colors
 
 # just say no to zle vim mode:
-bindkey -e
+bindkey -v
 
 # options
 setopt appendhistory extendedglob histignoredups nonomatch prompt_subst interactivecomments
