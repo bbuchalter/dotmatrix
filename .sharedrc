@@ -157,4 +157,4 @@ alias tjpath='cd ~/workspace/tommyjohn'
 alias dotpath='cd ~/workspace/dotmatrix'
 
 # https://gist.github.com/dergachev/4627207
-function gifmov() { ffmpeg -i $1 -s 600x400 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > $1.gif ;}
+function gifmov() { ffmpeg -i $1 -s $2 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > $1.gif ;}
