@@ -5,8 +5,8 @@
   * chruby
   * wget
   * tmux
-
 * Hub completion scripts need to be updated manually every now and again
+* iterm color profile needs to be manually setup
 
 # DOTMATRIX
 
