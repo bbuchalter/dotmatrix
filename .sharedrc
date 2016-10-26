@@ -152,7 +152,6 @@ if [[ -s "$UBUNTU_CHRUBY_PATH/auto.sh" ]] ; then source "$UBUNTU_CHRUBY_PATH/aut
 alias gg='git grep'
 alias be='bundle exec'
 alias gpus='git push --set-upstream origin $(git symbolic-ref --short HEAD 2>/dev/null)'
-alias suspend='dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Suspend'
 alias tjpath='cd ~/workspace/tommyjohn'
 alias dotpath='cd ~/workspace/dotmatrix'
 
