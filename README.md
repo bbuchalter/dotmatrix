@@ -5,19 +5,6 @@
   * chruby
   * wget
   * tmux
-* Hub completion scripts need to be updated manually every now and again:
-```
-cd .bash
-rm hub.bash_completion.sh
-wget https://raw.githubusercontent.com/github/hub/v$(hub version | grep "hub version" | cut -d " " -f 3)/etc/hub.bash_completion.sh
-chmod u+x hub.bash_completion.sh
-cd ../.zsh/functions
-rm hub.zsh_completion
-wget https://raw.githubusercontent.com/github/hub/v$(hub version | grep "hub version" | cut -d " " -f 3)/etc/hub.zsh_completion
-chmod u+x hub.zsh_completion.sh
-cd ../..
-
-* iterm color profile needs to be manually setup
 
 # DOTMATRIX
 
