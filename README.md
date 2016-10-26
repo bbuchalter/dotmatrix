@@ -1,3 +1,13 @@
+# Brian's personalizations
+
+* Depends on the following homebrew packages:
+  * hub
+  * chruby
+  * wget
+  * tmux
+
+* Hub completion scripts need to be updated manually every now and again
+
 # DOTMATRIX
 
 Dotmatrix is a collection of dotfiles used at Hashrocket to customize various
