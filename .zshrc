@@ -49,6 +49,7 @@ bindkey '^x^e' edit-command-line
 bindkey '\ep' up-line-or-search
 bindkey '\en' down-line-or-search
 bindkey '\ew' kill-region
+bindkey '^R' history-incremental-search-backward
 
 if [ -z "$TMUX" ]; then
   fg-widget() {
