@@ -11,7 +11,7 @@ root: ~/workspace/tommyjohn
 pre: ssh-add ~/.ssh/bal711\@gmail.com
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-pre_window: chruby 2.2
+# pre_window: 
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
