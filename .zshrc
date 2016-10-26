@@ -15,7 +15,7 @@ export LC_CTYPE=en_US.UTF-8
 export LESS=FRX
 
 # make with the nice completion
-autoload -U compinit; compinit
+autoload -U compinit; compinit -u
 
 # Completion for kill-like commands
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
