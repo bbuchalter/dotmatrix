@@ -6,7 +6,7 @@ files=
 
 manualfile="$dir/FILES"
 
-if [ -f $manualfile ]; then
+if [ -f "$manualfile" ]; then
   files="$(cat $manualfile)"
 else
   # Get list of files to link

@@ -9,10 +9,10 @@ for dotfile in $(./bin/file_list.sh); do
   dotmatrix_path="$PWD/$dotfile"
   path="$HOME/$dotfile"
 
-  if [ -L $path ]; then # Symlink?
-    if [ $dotmatrix_path = "$(readlink $path)" ]; then # Symlinked here?
+  if [ -L "$path" ]; then # Symlink?
+    if [ "$dotmatrix_path" = "$(readlink $path)" ]; then # Symlinked here?
       remove_notice $dotfile "exists"
-      unlink $path
+      unlink "$path"
     else
       skip_notice $dotfile "external"
     fi
@@ -24,10 +24,10 @@ done
 for file in $(find custom -type f -not -name '*README*'); do
   path=${file/"custom"/$HOME}
   name=$(basename $file)
-  if [ -L $path ]; then
-    if [ $PWD/$file = $(readlink $path) ]; then
+  if [ -L "$path" ]; then
+    if [ "$PWD/$file" = $(readlink $path) ]; then
       remove_notice $name "exists"
-      unlink $path
+      unlink "$path"
     else
       skip_notice $name "external"
     fi

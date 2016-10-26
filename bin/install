@@ -20,9 +20,9 @@ if [ "$1" = "--workstation" ]; then
     dotmatrix_path=$PWD/$dotfile
     path="$HOME/$dotfile"
 
-    if [ ! -e $path ]; then
+    if [ ! -e "$path" ]; then
       copy_notice $dotfile "absent"
-      cp $dotmatrix_path $path
+      cp "$dotmatrix_path" "$path"
     else
       skip_notice $dotfile "exists"
     fi
@@ -33,11 +33,11 @@ for dotfile in $(./bin/file_list.sh); do
   dotmatrix_path="$PWD/$dotfile"
   path="$HOME/$dotfile"
 
-  [ -e $dotmatrix_path ] || continue
+  [ -e "$dotmatrix_path" ] || continue
 
-  if [ ! -L $path ]; then
+  if [ ! -L "$path" ]; then
     link_notice $dotfile "absent"
-    ln -nfs $dotmatrix_path $path
+    ln -nfs "$dotmatrix_path" "$path"
   else
     skip_notice $dotfile "exists"
   fi
@@ -48,11 +48,11 @@ if [[ "$OSTYPE" == 'darwin'* ]]; then
   for file in $(find custom -type f -not -name '*README*'); do
     path=${file/"custom"/$HOME}
     name=$(basename $file)
-    if [ ! -L $path ]; then
+    if [ ! -L "$path" ]; then
       dest=$(dirname $path)
       link_notice $name "absent"
-      mkdir -p $dest
-      ln -nfs $PWD/$file $dest
+      mkdir -p "$dest"
+      ln -nfs "$PWD/$file" "$dest"
     else
       skip_notice $name "exists"
     fi
@@ -65,4 +65,4 @@ if [ ! -e "$HOME/.gitconfig.local" ]; then
   echo -e "Reminder: pass the --workstation flag to copy this file automatically.\n"
 fi
 
-$PWD/hr/bin/hr autoinstall
+"$PWD/hr/bin/hr" autoinstall
