@@ -29,8 +29,13 @@ startup_window: editor
 # post: tmux -CC attach -t tj
 
 windows:
-  - editor: vim
-  - shell:
-  - server: ss
-  - console: sc
-  - log: tail -f log/development.log
+  - vi: vim
+  - sh: gemstash start
+  - sh:
+  - dev-srv: ss
+  - dev-c: sc
+  - stage-c:
+  - prod-c:
+  - solidus: cd ~/workspace/solidus
+  - rev-prxy: omc ssh tommyjohn-staging-util -R 3000:localhost:3000 -a tj --forward-agent --layer=apple-pay-proxy
+  - deploy: cd ~/workspace/tommyjohn.com-deploy/env
