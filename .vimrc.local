@@ -1,0 +1,11 @@
+function! FzyCommand(choice_command, vim_command)
+  silent let output = system(a:choice_command . " | fzy ")
+  redraw!
+  if v:shell_error == 0 && !empty(output)
+    exec a:vim_command . ' ' . output
+  endif
+endfunction
+
+nnoremap <leader>e :call FzyCommand("ag . --nocolor -l -g ''", ":e")<cr>
+nnoremap <leader>v :call FzyCommand("ag . --nocolor -l -g ''", ":vs")<cr>
+nnoremap <leader>s :call FzyCommand("ag . --nocolor -l -g ''", ":sp")<cr>
